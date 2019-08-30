@@ -26,6 +26,7 @@ Table Of Contents:
 17. Back To Top Button
 18. Extra Pages
 19. Media Queries
+20. Customizations
 ******************************************/
 
 /*****************************************
@@ -2202,3 +2203,56 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+
+/* CUSTOMIZATIONS */
+.koovi-references-div {
+	padding-top: 1rem; 
+	text-align:center;
+}
+
+.koovi-references-h3 {
+	color: #ffffff;
+}
+
+.koovi-references-color {
+	background-color: #F04E23;
+	padding:1rem;
+}
+
+.koovi-references-slider-div {
+	padding-top: 2rem; 
+	padding-bottom: 5rem;
+}
+
+.koovi-bgcolor-white {
+	background-color: #fff;
+}
+
+.koovi-clients {
+	padding-top: 1rem; 
+	text-align:center;
+}
+
+.koovi-bgcolor-gray {
+	background-color: #eee;
+}
+
+.koovi-color-gray-dark {
+	color: #c0c0c0;
+}
+
+.koovi-color-gray-lit {
+	color: #dddddd;
+}
+.koovi-color-gray-dark {
+	color: #c0c0c0;
+}
+
+.koovi-color-white, .koovi-color-white > a {
+	color: #ffffff;
+}
+
+.koovi-social-div {
+	padding-top: 4rem;
+	text-align:center;
+}
