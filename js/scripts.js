@@ -219,7 +219,7 @@
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
             cformError();
-            csubmitMSG(false, "Please fill all fields!");
+            csubmitMSG(false, "Täytä kaikki kentät");
         } else {
             // everything looks good!
             event.preventDefault();
@@ -235,8 +235,12 @@
         var terms = $("#cterms").val();
         $.ajax({
             type: "POST",
-            url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message + "&terms=" + terms, 
+            url: "https://59hng278ye.execute-api.eu-north-1.amazonaws.com/dev/contact",
+            data: {
+                name: name,
+                email: email,
+                message: message
+            },      
             success: function(text) {
                 if (text == "success") {
                     cformSuccess();
@@ -250,7 +254,7 @@
 
     function cformSuccess() {
         $("#contactForm")[0].reset();
-        csubmitMSG(true, "Message Submitted!");
+        csubmitMSG(true, "Kiitos yhteydenotosta! Otamme yhteyttä mahdollisimman pian.");
         $("input").removeClass('notEmpty'); // resets the field label after submission
         $("textarea").removeClass('notEmpty'); // resets the field label after submission
     }
