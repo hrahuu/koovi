@@ -7,7 +7,7 @@
 
 (function($) {
     "use strict"; 
-	
+    
 	/* Preloader */
 	$(window).on('load', function() {
 		var preloaderFadeOutTime = 500;
@@ -233,21 +233,26 @@
 		var email = $("#cemail").val();
         var message = $("#cmessage").val();
         var terms = $("#cterms").val();
-        $.ajax({
-            type: "POST",
+        $.post({
             url: "https://59hng278ye.execute-api.eu-north-1.amazonaws.com/dev/contact",
             data: {
                 name: name,
                 email: email,
                 message: message
             },      
+            dataType: 'text',
             success: function(text) {
+                console.log("text", text);
                 if (text == "success") {
                     cformSuccess();
                 } else {
                     cformError();
-                    csubmitMSG(false, text);
+                    csubmitMSG(false, "Valitettavasti viestin lähetys ei onnistunut tuntemattomasta syystä. Osa suoraan yhteyttä sähköpostiimme: info@koovi.fi");
                 }
+            },
+            error: function( jqXhr, textStatus, errorThrown ){
+                cformError();
+                csubmitMSG(false, "Valitettavasti viestin lähetys ei onnistunut tuntemattomasta syystä. Osa suoraan yhteyttä sähköpostiimme: info@koovi.fi");
             }
         });
 	}
