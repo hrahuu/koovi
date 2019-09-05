@@ -234,7 +234,7 @@
         var message = $("#cmessage").val();
         var terms = $("#cterms").val();
         $.post({
-            url: "https://59hng278ye.execute-api.eu-north-1.amazonaws.com/dev/contact",
+            url: "https://kl4yeplanb.execute-api.eu-west-1.amazonaws.com/dev/contact",
             data: {
                 name: name,
                 email: email,
