@@ -1898,11 +1898,16 @@ a:hover.back-to-top {
 		vertical-align: top;
 	}
 
+	/*
 	.cards-1 .col-lg-12 div.card:nth-child(3n+2) {
 		margin-right: 2rem;
 		margin-left: 2rem;
 	}
-	
+	*/
+	.cards-1 .card {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}	
 	/* end of services */
 
 
@@ -2086,10 +2091,12 @@ a:hover.back-to-top {
 		max-width: 21rem;
 	}
 
+/*
 	.cards-1 .col-lg-12 div.card:nth-child(3n+2) {
 		margin-right: 2.875rem;
 		margin-left: 2.875rem;
 	}
+*/
 	/* end of services */
 
 
